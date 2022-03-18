@@ -31,6 +31,9 @@ jobs:
           path: ~/rails-docker
       - ruby/install-deps
       - run:
+          name: Install
+          command: bundle install
+      - run:
           name: Database setup
           command: bundle exec rails db:migrate
       - run:
